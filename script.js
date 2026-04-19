@@ -10,8 +10,18 @@ let filtroAtivo = 'todos'
 //Busca os jogos salvos no localStorage. Se tiver, usa eles. Se não tiver, começa com uma lista vazia.
 let jogos = JSON.parse(localStorage.getItem('jogos')) || []
 
+if (localStorage.getItem('dark')) {
+    document.body.classList.add('dark')
+}
+
 function toggleDark() {
     document.body.classList.toggle('dark')
+    
+    if (document.body.classList.contains('dark')) {
+        localStorage.setItem('dark', 'true')
+    } else {
+        localStorage.removeItem('dark')
+    } 
 }
 
 function filtrar(filtro) {
