@@ -89,7 +89,7 @@
     #filtroTodos,
     #filtroJogando,
     #filtroTerminado {
-        background: #fff;
+        background: var(--bg);
         border: 1px solid #ddd;
         padding: 0.4rem 1rem;
         border-radius: 100px;
@@ -179,3 +179,9 @@
     li.terminado .nome {
         text-decoration: line-through;
     }
+
+    @media (max-width: 600px) {
+    input {
+        width: 100%;
+    }
+}
