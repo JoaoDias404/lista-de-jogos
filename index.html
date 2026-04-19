@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="estilos.css">
+  
+</head>
+
+<body>
+    <button id="darkMode" onclick="toggleDark()">🌙</button>
+    <h1>Minha Lista</h1>
+    <div class="contadores">
+        <div class="contador">
+            <span id="total">0</span>
+            <p>Total</p>
+        </div>
+        <div class="contador">
+            <span id="contJogando">0</span>
+            <p>Jogando</p>
+        </div>
+        <div class="contador">
+            <span id="contTerminado">0</span>
+            <p>Terminados</p>
+        </div>
+    </div>
+    <p>Progresso: <span id="pct">0%</span></p>
+    <progress id="barra" value="0" max="100"></progress>
+    <input type="text" placeholder="Digite sua tarefa aqui...">
+    <button id="adicionar">Adicionar</button>
+    <button id="limpar">Limpar Tudo</button>
+    <div class="filtros">
+        <button id="filtroTodos" onclick="filtrar('todos')">Todos</button>
+        <button id="filtroJogando" onclick="filtrar('jogando')">Jogando</button>
+        <button id="filtroTerminado" onclick="filtrar('terminado')">Terminado</button>
+    </div>
+    <span id="erro"></span>
+    <ul id="lista"></ul>
+    <script src="script.js"></script>
+</body>
+
+</html>
